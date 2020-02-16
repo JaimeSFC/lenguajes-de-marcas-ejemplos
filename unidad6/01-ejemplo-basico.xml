@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marcadores>
+    <pagina>
+        <nombre>José Juan Sánchez</nombre>
+        <descripcion>Web de José Juan Sánchez</descripcion>
+        <url>https://josejuansanchez.org/</url>
+    </pagina>
+    <pagina>
+        <nombre>En segunda persona</nombre>
+        <descripcion>Web de Alfredo Moreno Vozmediano</descripcion>
+        <url>http://www.ensegundapersona.es/</url>
+    </pagina>
+    <pagina>
+        <nombre>Pablo Esteban</nombre>
+        <descripcion>Web de Pablo Esteban</descripcion>
+        <url>https://www.pabloesteban.eu/</url>
+    </pagina>  
+</marcadores>
