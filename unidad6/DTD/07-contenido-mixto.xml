@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE p [
+    <!ELEMENT p ANY>
+    <!ELEMENT strong (#PCDATA)>
+    <!ELEMENT em (#PCDATA)>
+]>
+<p>
+    <strong>Elsa</strong> vive en <strong>pamplona</strong>
+</p>
