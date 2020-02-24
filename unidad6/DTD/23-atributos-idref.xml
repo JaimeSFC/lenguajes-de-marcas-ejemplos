@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE cine [
+    <!ELEMENT cine (peliculas, directores)>
+    <!ELEMENT peliculas (pelicula*)>
+    <!ELEMENT pelicula (#PCDATA)>
+    <!ATTLIST pelicula id-director IDREF #IMPLIED>
+    <!ELEMENT directores (director*)>
+    <!ELEMENT director (#PCDATA)>
+    <!ATTLIST director id ID #REQUIRED>
+    
+]>
+<cine>
+    <peliculas>
+        <pelicula id-director="d-001">El Padrino</pelicula>
+        <pelicula id-director="d-002">Mystic River</pelicula>
+    </peliculas>
+    <directores>
+        <director id="d-001">Francis Ford Coppola</director>
+        <director id="d-002">Clint Eastwood</director>
+    </directores>
+</cine>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pilotos [
+    <!ELEMENT pilotos (piloto*)>
+    <!ELEMENT piloto (#PCDATA)>
+    <!ATTLIST piloto edad CDATA #REQUIRED
+                    pais CDATA #IMPLIED
+                    activo CDATA #FIXED "si">                                                   
+]>
+<!-- atributo 'activo' que valga siempre si-->
+<pilotos>
+    <piloto edad="40" pais="España" activo="si">Fernando Alonso</piloto>
+    <piloto edad="28">Carlos Sainz Jr</piloto>
+    <piloto edad="34">Sebastian Vettel</piloto>
+</pilotos>

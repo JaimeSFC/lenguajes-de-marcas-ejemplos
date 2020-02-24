@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pilotos [
+    <!ELEMENT pilotos (piloto*)>
+    <!ELEMENT piloto (#PCDATA)>
+    <!ATTLIST piloto pais CDATA "España"
+                     categoria CDATA "Fórmula 1"
+    >
+]>
+<!-- atributo categoria, por defecto, fórmula 1 -->
+<pilotos>
+    <piloto categoria="Dakar">Fernando Alonso</piloto>
+    <piloto>Carlos Sainz Jr</piloto>
+    <piloto pais="Alemania">Sebastian Vettel</piloto>
+</pilotos>

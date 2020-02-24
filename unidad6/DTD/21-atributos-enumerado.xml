@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE peliculas [
+    <!ELEMENT peliculas (pelicula*)>
+    <!ELEMENT pelicula (#PCDATA)>
+    <!ATTLIST pelicula pais (ESP | EEUU | ITA | BRA) #REQUIRED>
+]>
+<!-- Atributo pais, que puede valer sólo: ESP, EEUU, ITA, BRA -->
+<peliculas>
+    <pelicula pais="EEUU">El Padrino</pelicula>
+    <pelicula pais="BRA">Ciudad de Dios</pelicula>
+</peliculas>
