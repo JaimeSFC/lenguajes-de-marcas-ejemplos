@@ -3,9 +3,9 @@
     <!ELEMENT personas (nombre+)>
     <!ELEMENT nombre (#PCDATA)>
 ]>
-<!-- Puedo tener 1 o más elementos nombre -->
+<!-- Es necesario permitir una o más personas -->
 <personas>
-    <nombre>Ana</nombre>
-    <nombre>Iker</nombre>
-    <nombre>Elsa</nombre>
+    <nombre>Alberto</nombre>
+    <nombre>Laura</nombre>
+    <nombre>Juan</nombre>
 </personas>

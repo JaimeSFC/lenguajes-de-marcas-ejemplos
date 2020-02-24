@@ -4,8 +4,9 @@
     <!ELEMENT piloto (#PCDATA)>
     <!ATTLIST piloto pais CDATA "España">
 ]>
+<!-- El atributo pais, por defecto (si no se pone nada) vale España -->
 <pilotos>
     <piloto>Fernando Alonso</piloto>
-    <piloto>Carlos Sainz Jr</piloto>
+    <piloto>Carlos Sainz</piloto>
     <piloto pais="Alemania">Sebastian Vettel</piloto>
 </pilotos>
