@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE personas [
+    <!ELEMENT personas (nombre+)>
+    <!ELEMENT nombre (#PCDATA)>
+]>
+<!-- Puedo tener 1 o más elementos nombre -->
+<personas>
+    <nombre>Ana</nombre>
+    <nombre>Iker</nombre>
+    <nombre>Elsa</nombre>
+</personas>

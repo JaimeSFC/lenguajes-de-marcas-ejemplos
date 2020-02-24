@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE localidades [
+    <!ELEMENT localidades (localidad*)>
+    <!ELEMENT localidad ( (pais, ciudad) | codigo_postal)>
+    <!ELEMENT pais (#PCDATA)>
+    <!ELEMENT ciudad (#PCDATA)>
+    <!ELEMENT codigo_postal (#PCDATA)>
+]>
+<localidades>
+    <localidad>
+        <pais>España</pais>
+        <ciudad>Valencia</ciudad>
+    </localidad>
+    <localidad>
+        <codigo_postal>31015</codigo_postal>
+        </localidad>
+</localidades>

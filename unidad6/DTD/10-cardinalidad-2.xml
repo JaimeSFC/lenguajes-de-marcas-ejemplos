@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE receta-de-cocina SYSTEM "10-cardinalidad.dtd">
+<!-- El elemento ingrediente puede aparecer 0 o + veces-->
+<receta-de-cocina>
+    <nombre>Tortilla de patatas</nombre>
+    <ingrediente>Huevo</ingrediente>
+    <ingrediente>Patata</ingrediente>
+    <ingrediente>Aceite</ingrediente>
+    <ingrediente>Cebolla</ingrediente>
+</receta-de-cocina>

@@ -1,0 +1,6 @@
+<!ELEMENT persona (nombre, apellidos, (dni | pasaporte) )>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT dni (#PCDATA)>
+<!ELEMENT pasaporte (#PCDATA)>
+

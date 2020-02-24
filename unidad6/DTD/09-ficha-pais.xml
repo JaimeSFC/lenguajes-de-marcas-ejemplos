@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pais [
+    <!ELEMENT pais (nombre, capital, idiomas)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT capital (#PCDATA)>
+    <!ELEMENT idiomas (idioma*)>
+    <!ELEMENT idioma (#PCDATA)>
+]>
+<pais>
+    <nombre>Suiza</nombre>
+    <capital>Berna</capital>
+    <idiomas>
+        <idioma>Alemán</idioma>
+        <idioma>Francés</idioma>
+        <idioma>Italiano</idioma>
+        <idioma>Romanche</idioma>
+    </idiomas>
+</pais>

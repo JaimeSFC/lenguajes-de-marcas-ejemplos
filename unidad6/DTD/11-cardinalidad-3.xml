@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE persona [
+    <!ELEMENT persona (nombre, abonado_al_almeria?)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT abonado_al_almeria EMPTY>
+]>
+<persona>
+    <nombre>Juan Alberto</nombre>
+    <abonado_al_almeria/>
+</persona>

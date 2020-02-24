@@ -1,0 +1,3 @@
+<!ELEMENT receta-de-cocina (nombre, ingrediente*)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT ingrediente (#PCDATA)>

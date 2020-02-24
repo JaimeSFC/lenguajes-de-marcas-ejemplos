@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE persona SYSTEM "13-persona.dtd">
+<persona>
+    <nombre>Laura</nombre>
+    <apellidos>Blanes</apellidos>
+    <dni>743122222H</dni>
+</persona>
