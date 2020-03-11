@@ -1,0 +1,10 @@
+<!ELEMENT textos (seccion | parrafo)*>
+<!ELEMENT seccion (#PCDATA)>
+<!ELEMENT parrafo (#PCDATA)>
+
+<!ENTITY % atributos_comunes "
+    id ID #REQUIRED
+    nombre CDATA 'default'
+    ">
+<!ATTLIST seccion %atributos_comunes;>
+<!ATTLIST parrafo %atributos_comunes;>

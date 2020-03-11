@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE condiciones [
+    <!ENTITY empresa "ASIR S.A">
+    <!ENTITY direccion "C/ Javier Sanz, 15">
+    <!ENTITY ciudad "Almería">
+    <!ENTITY lopd "Ley Orgánica 3/2018, de 5 de Diciembre, de protección de datos personales">
+    <!ELEMENT condiciones (#PCDATA)>
+]>
+
+<condiciones>
+    La empresa &empresa; con sede en &direccion; en &ciudad;, en base a la ley &lopd; se declara no responsable por la opción personal vertida por los usuarios en el foro.
+</condiciones>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE textos [
+    <!ENTITY texto SYSTEM "27-texto.txt">
+    <!ELEMENT textos (texto*)>
+    <!ELEMENT texto (#PCDATA)>
+]>
+
+<!-- Está deshabilitado por seguridad -->
+<textos>
+    <texto>
+        Charles Chaplin dijo &texto;
+    </texto>
+</textos>
