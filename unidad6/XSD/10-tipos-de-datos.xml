@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coche>
+<coche xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="10-tipos-de-datos.xsd">
     <modelo>Seat León</modelo>
     <!-- natural pequeño -->
     <puertas>5</puertas>

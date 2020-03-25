@@ -7,7 +7,7 @@
                 <xs:element name="puertas" type="xs:short"/>
                 <xs:element name="velocidad" type="xs:integer"/>
                 <xs:element name="consumo" type="xs:float"/>
-                <xs:element name="fecha" type="xs:date"/>
+                <xs:element name="fecha_fabricacion" type="xs:date"/>
                 <xs:element name="ultima_revision" type="xs:dateTime"/>
             </xs:sequence>
         </xs:complexType>
