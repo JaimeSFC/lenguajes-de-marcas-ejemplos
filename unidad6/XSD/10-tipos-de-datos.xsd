@@ -6,7 +6,11 @@
                 <xs:element name="modelo" type="xs:string"/>
                 <xs:element name="puertas" type="xs:short"/>
                 <xs:element name="velocidad" type="xs:integer"/>
-                <xs:element name="consumo" type="xs:float"/>
+                <xs:element name="consumo">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:float"/>
+                    </xs:simpleType>
+                </xs:element>
                 <xs:element name="fecha_fabricacion" type="xs:date"/>
                 <xs:element name="ultima_revision" type="xs:dateTime"/>
             </xs:sequence>
