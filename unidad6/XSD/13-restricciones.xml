@@ -13,6 +13,6 @@
         <!--Grupo sanguíneo, que puede valer solo A, B, AB o 0 -->
         <grupo-s>AB</grupo-s>
         <!-- tiene 9 caracteres numéricos, y el último es una letra. -->
-        <!-- <dni>67391826F</dni> -->
+        <dni>67391826F</dni>
     </usuario>
 </usuarios>

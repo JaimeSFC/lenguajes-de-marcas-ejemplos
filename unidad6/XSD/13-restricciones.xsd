@@ -35,6 +35,14 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="tipo-dni">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{8}[A-Z]"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    
+
 
     <xs:element name="usuarios">
         <xs:complexType>
@@ -47,6 +55,7 @@
                             <xs:element name="edad" type="tipo-edad-laboral"/>
                             <xs:element name="fecha-nacimiento" type="tipo-fnac"/>
                             <xs:element name="grupo-s" type="tipo-grupo-sanguineo"/>
+                            <xs:element name="dni" type="tipo-dni"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
