@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" id="numeros">
+		<xs:element name="numero" type="xs:integer"/>
+		<!-- Complex -->
+		<xs:element name="numeros">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="numero"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+</xs:schema>

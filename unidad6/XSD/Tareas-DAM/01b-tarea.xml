@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<numeros xmlns:xsi="http://wwww.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="01b-tarea.xsd">
+<numero>25</numero>
+</numeros>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Duda: que diferencia hay entre poner la raiz del XML, en este caso "recetas" como ID o como primer elemento? -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" id="recetas">
+  <xs:element name="recetas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="receta">
+
+          <xs:complexType mixed="true">
+						<!-- Mixed=true  permite añadir contenido dentro de la etiqueta ascendente -->
+            <xs:sequence>
+              <xs:element name="description" type="xs:string"/>
+              <xs:element name="ingredients">
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="ingredient" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="preparation">
+                <xs:complexType mixed="false">
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="step" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="score">
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:element name="user-review" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+
+						<xs:attribute name="dificultad" type="xs:string" use="required"/>
+						<!-- Si se aplica un valor por defecto, use no puede ser requerido sino opcional -->
+						<xs:attribute name="picture" type="xs:string" use="optional" default="receta.jpg"/>
+						<xs:attribute name="autor" type="xs:string" use="required"/>
+						<xs:attribute name="country" type="xs:string" use="required"/>
+
+
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

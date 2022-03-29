@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" id="recetas">
+	<xs:simpleType name="nivel-dificultad">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Fácil" />
+			<xs:enumeration value="Medio" />
+			<xs:enumeration value="Difícil" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="imagen-receta" type="xs:string" default="receta.jpg"/>
+	<xs:element name="autor-receta" type="xs:string" default="Arguiñano"/>
+	<xs:element name="pais-receta" type="xs:string" default="España"/>
+	<xs:simpleType name="pais-receta">
+		<xs:restriction base="xs:string"></xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="description" type="xs:string"/>
+
+	<xs:complexType name="ingredients">
+		<xs:sequence>
+			<xs:element name="ingredient" maxOccurs="unbounded" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="preparation">
+		<xs:sequence>
+			<xs:element name="step" maxOccurs="unbounded" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="score" >
+		<xs:sequence>
+			<xs:element name="user-review" minOccurs="0" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+
+</xs:schema>

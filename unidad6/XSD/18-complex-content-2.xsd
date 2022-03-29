@@ -19,8 +19,6 @@
         <xs:attribute name="idioma" type="tipo-idioma" use="optional"/>
     </xs:complexType>
 
-
-
     <xs:element name="libros">
         <xs:complexType>
             <xs:sequence>

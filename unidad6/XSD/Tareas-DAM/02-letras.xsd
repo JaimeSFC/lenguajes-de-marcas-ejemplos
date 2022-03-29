@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" id="letras">
+<!-- Simple type -->
+<xs:element name="letra_1" type="xs:string"/>
+<xs:element name="letra_2" type="xs:string"/>
+<!-- Complex Type -->
+<xs:complexType name="letras">
+	<xs:sequence>
+		<xs:element name="letra_1"/>
+		<xs:element name="letra_2"/>
+
+<!-- 		<xs:element ref="letra_1"/>
+		<xs:element ref="letra_2"/> -->
+
+	</xs:sequence>
+</xs:complexType>
+</xs:schema>
