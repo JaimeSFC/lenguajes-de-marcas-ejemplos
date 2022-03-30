@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<recetas xmlns:xsi="http://wwww.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="05-recetas.xsd">
-
+<recetas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="05-recetas.xsd">  
+    
 	<!-- Mi primer plato favorito -->
 	<receta dificultad="Fácil" picture="wp-content/gazpacho.png" autor="Martín Berasategui" country="España">
-		Gazpacho
-		<description>La sopa del verano, súper sencilla de preparar y súper refrescante.</description>
+	<nombre-receta>Gazpacho</nombre-receta>
+				<description>La sopa del verano, súper sencilla de preparar y súper refrescante.</description>
 		<ingredients>
 			Para 2 personas
 			<ingredient>1 Ajo</ingredient>
@@ -15,9 +16,9 @@
 		</ingredients>
 		<preparation>
 			30 minutos
-			<step> 1. Pelar y cortar bien los vegetales, meter en la turmix con los demás ingredients.</step>
-			<step> 2. Tras 10 nminutos a potencia máxima, añadir 1 litro de agua y enfriar en la nevera.</step>
-			<step> 3. Dejar enfriar durante 20 minutos, pasado ese tiempo, ¡a disfrutar!</step>
+			<step>Pelar y cortar bien los vegetales, meter en la turmix con los demás ingredients.</step>
+			<step>Tras 10 nminutos a potencia máxima, añadir 1 litro de agua y enfriar en la nevera.</step>
+			<step>Dejar enfriar durante 20 minutos, pasado ese tiempo, ¡a disfrutar!</step>
 		</preparation>
 		<score>
 			¡De rechupete!

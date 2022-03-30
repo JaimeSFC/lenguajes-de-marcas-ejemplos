@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="05.xsd">
+	<prestamo codigo_prestamo="123">
+		<ejemplar>
+			<titulo>Momo</titulo>
+			<numero_registro>1234</numero_registro>
+			<autor>Michael Ende</autor>
+		</ejemplar>
+		<fecha_prestamo>2020-02-17</fecha_prestamo>
+		<fecha_devolucion>2020-02-20</fecha_devolucion>
+		<bibliotecario>
+			<nombre>Ataulfo</nombre>
+			<apellidos>Ramírez Pérez</apellidos>
+		</bibliotecario>
+		<lector>
+			<id>123L</id>
+			<nombre>Cresencia</nombre>
+			<apellidos>García García</apellidos>
+			<telefono>985625126</telefono>
+			<direccion>
+				<tipo_calle>Calle</tipo_calle>
+				<nombre_calle>Mi calle</nombre_calle>
+				<numero>1</numero>
+				<piso>1</piso>
+				<letra>A</letra>
+				<cp>33707</cp>
+				<localidad>Villayón</localidad>
+				<provincia>Asturias</provincia>
+			</direccion>
+		</lector>
+	</prestamo>
+	<prestamo codigo_prestamo="123">
+		<ejemplar>
+			<titulo>Momo</titulo>
+			<numero_registro>1234</numero_registro>
+			<autor>Michael Ende</autor>
+		</ejemplar>
+		<ejemplar>
+			<titulo>Momo</titulo>
+			<numero_registro>1234</numero_registro>
+			<autor>Michael Ende</autor>
+		</ejemplar>
+		<ejemplar>
+			<titulo>Momo</titulo>
+			<numero_registro>1234</numero_registro>
+			<autor>Michael Ende</autor>
+		</ejemplar>
+		<fecha_prestamo>2020-02-17</fecha_prestamo>
+		<fecha_devolucion>2020-02-20</fecha_devolucion>
+		<bibliotecario>
+			<nombre>Ataulfo</nombre>
+			<apellidos>Ramírez Pérez</apellidos>
+		</bibliotecario>
+		<lector>
+			<id>123L</id>
+			<nombre>Cresencia</nombre>
+			<apellidos>García García</apellidos>
+			<telefono>985625126</telefono>
+			<direccion>
+				<tipo_calle>Calle</tipo_calle>
+				<nombre_calle>Mi calle</nombre_calle>
+				<numero>1</numero>
+				<piso>1</piso>
+				<letra>A</letra>
+				<cp>33707</cp>
+				<localidad>Villayón</localidad>
+				<provincia>Asturias</provincia>
+			</direccion>
+		</lector>
+	</prestamo>
+</biblioteca> 

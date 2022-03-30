@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" id="biblioteca">
+
+	<!-- ? METADATA DE LOS subtipos de DIRECCION -->
+	<xs:simpleType name="t_calle">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="100" />
+			<xs:minLength value="1" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="nombre_calle">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="255" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="numero">
+		<xs:restriction base="xs:integer">
+			<xs:minExclusive value="1" />
+			<xs:maxExclusive value="100" />
+			<xs:fractionDigits value="0" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="piso">
+		<xs:restriction base="xs:integer">
+			<xs:minExclusive value="1" />
+			<xs:maxExclusive value="100" />
+			<xs:fractionDigits value="0" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="letra">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1" />
+			<xs:minLength value="0" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="cp">
+		<xs:restriction base="xs:integer">
+			<xs:minExclusive value="33000" />
+			<xs:maxExclusive value="33100" />
+			<xs:fractionDigits value="0" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="localidad">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="255" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="provincia">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="255" />
+		</xs:restriction>
+	</xs:simpleType>
+
+
+	<!-- ? METADATA DE LOS subtipos de LECTOR -->
+	<xs:simpleType name="id">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="100" />
+			<xs:minLength value="1" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="nombre">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="255" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="apellidos">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="255" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="telefono">
+		<xs:restriction base="xs:integer">
+<!-- 			<xs:minExclusive value="9" />
+			<xs:maxExclusive value="9" />
+			<xs:fractionDigits value="0" /> -->
+		</xs:restriction>
+	</xs:simpleType>
+
+
+	<!-- ? METADATA DE LOS subtipos de EJEMPLAR -->
+	<xs:simpleType name="titulo">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="255" />
+			<xs:minLength value="1" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="numero_registro">
+		<xs:restriction base="xs:integer">
+<!-- 			<xs:minExclusive value="0" />
+			<xs:maxExclusive value="11" />
+			<xs:fractionDigits value="0" /> -->
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="autor">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="255" />
+			<xs:minLength value="1" />
+		</xs:restriction>
+	</xs:simpleType>
+
+
+	<!-- ? METADATA DE LOS subtipos de PRESTAMO -->
+	<xs:simpleType name="fecha_prestamo">
+		<xs:restriction base="xs:date" />
+	</xs:simpleType>
+
+	<xs:simpleType name="fecha_devolucion">
+		<xs:restriction base="xs:date" />
+	</xs:simpleType>
+
+
+	<!-- ? DEFINO LOS SUBTIPOS DE DIRECION -->
+	<xs:element name="direccion">
+<xs:complexType>
+	<xs:sequence>
+		<xs:element name="tipo_calle" type="t_calle" />
+		<xs:element name="nombre_calle" type="nombre_calle" />
+		<xs:element name="numero" type="numero" />
+		<xs:element name="piso" type="piso" />
+		<xs:element name="letra" type="letra" />
+		<xs:element name="cp" type="cp" />
+		<xs:element name="localidad" type="localidad" />
+		<xs:element name="provincia" type="provincia" />
+	</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+<!-- ? DEFINO LOS SUBTIPOS DE LECTOR -->
+<xs:element name="lector">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="id" type="id"/>
+			<xs:element name="nombre" type="nombre"/>
+			<xs:element name="apellidos" type="apellidos"/>
+			<xs:element name="telefono" type="telefono"/>
+			<xs:element name="direccion"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+
+<!-- ? DEFINO LOS SUBTIPOS DE EJEMPLAR -->
+<xs:element name="ejemplar">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="titulo" type="titulo"/>
+			<xs:element name="numero_registro" type="numero_registro"/>
+			<xs:element name="autor" type="autor"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+
+<!-- ? DEFINO LOS SUBTIPOS DE PRESTAMO -->
+<xs:element name="prestamo">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="ejemplar"/>
+			<xs:element name="fecha_prestamo" type="fecha_prestamo"/>
+			<xs:element name="fecha_devolucion" type="fecha_devolucion"/>
+			<xs:element name="bibliotecario"/>
+			<xs:element name="lector"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+
+	<xs:element name="biblioteca">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="prestamo" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

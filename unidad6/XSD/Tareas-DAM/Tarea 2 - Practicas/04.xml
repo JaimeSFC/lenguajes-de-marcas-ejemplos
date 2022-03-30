@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<blog_cocina xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="04.xsd">  
+		<articulo> 
+			<referencia>3847</referencia> 
+			<titulo>Bizcocho de chocolate</titulo> 
+			<fecha>2015-03-01</fecha> 
+			<publicado>true</publicado> 
+			<clasificacion categoria="recetas de reposteria"/> 
+			</articulo> 
+			<articulo> 
+			<referencia>2157</referencia> 
+			<titulo>Tarta de manzana</titulo> 
+			<fecha>2015-03-18</fecha> 
+			<publicado>true</publicado> 
+			<clasificacion categoria="recetas de reposteria"/> 
+			</articulo> 
+		 </blog_cocina> 

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cartuchos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="02.xsd">  
+			<cartucho> 
+			<marca> 
+			<nombre>String</nombre> 
+			<telefono>0</telefono> 
+			<correoE>String</correoE> 
+			</marca> 
+			<modelo>String</modelo> 
+			<maxPaginas>1</maxPaginas> 
+			<FechaCaducidad>1957-08-13</FechaCaducidad> 
+			</cartucho> 
+		 </cartuchos> 

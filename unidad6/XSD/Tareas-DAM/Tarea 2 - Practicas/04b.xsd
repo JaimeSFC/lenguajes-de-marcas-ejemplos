@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" id="catalogo">
+
+	<!-- ? DEFINO METADATA DE LOS SIMPLETYPES -->
+	<xs:simpleType name="t_cad20">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20" />
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="t_cad4">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="4" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="t_precio">
+		<xs:restriction base="xs:decimal">
+			<xs:minExclusive value="1"/>
+      <xs:maxExclusive value="10000"/>
+			<xs:fractionDigits value="2"/>
+			</xs:restriction>			
+	</xs:simpleType>
+
+	<xs:simpleType name="t_0a10">
+		<xs:restriction base="xs:integer">
+			<xs:minExclusive value="0"/>
+      <xs:maxExclusive value="10"/>
+			</xs:restriction>			
+	</xs:simpleType>
+
+	<!-- ? DEFINO LOS SUBTIPOS -->
+	<xs:element name="calidad">
+		<xs:complexType>
+			<xs:attribute name="valor" type="t_0a10"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="nombre" type="t_cad20" />
+	<xs:element name="referencia" type="t_cad4" />
+	<xs:element name="stock" type="xs:integer" />
+	<xs:element name="precio" type="t_precio" />
+	<xs:element name="comentario" type="t_cad20" />
+
+	<!-- ? DEFINO LO Q CUELGA DE PRODUCTO Y SUS OCURRENCIAS -->
+	<xs:element name="producto">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="calidad" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element ref="nombre" minOccurs="1" maxOccurs="unbounded" />
+				<xs:element ref="referencia" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element ref="stock" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element ref="precio" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element ref="comentario" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="catalogo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="producto" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

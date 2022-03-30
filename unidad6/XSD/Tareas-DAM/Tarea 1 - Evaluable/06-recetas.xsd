@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:element name="recetas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="receta">
+          <xs:complexType mixed="true">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="nombre-receta" type="xs:string"/>
+              <xs:element name="description" type="xs:string"/>
+              <xs:element name="ingredients">
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="ingredient" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="preparation">
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="step" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="score">
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:element name="user-review" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="dificultad" type="xs:string" use="required"/>
+            <xs:attribute name="picture" type="xs:string" use="required"/>
+            <xs:attribute name="autor" type="xs:string" use="required"/>
+            <xs:attribute name="country" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

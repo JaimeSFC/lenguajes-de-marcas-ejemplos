@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" id="cartuchos">
+<xs:element name="nombre" type="xs:string"/>
+<xs:element name="telefono" type="xs:integer"/>
+<xs:element name="correoE" type="xs:string"/>
+<xs:element name="modelo" type="xs:string"/>
+<xs:element name="maxPaginas" type="xs:positiveInteger"/>
+<xs:element name="FechaCaducidad" type="xs:date"/>
+
+<xs:element name="marca">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="nombre"/>
+      <xs:element ref="telefono"/>
+      <xs:element ref="correoE"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="cartucho">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="marca"/>
+      <xs:element ref="modelo"/>
+      <xs:element ref="maxPaginas"/>
+      <xs:element ref="FechaCaducidad"/>
+  </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="cartuchos">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="cartucho"/>
+   </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

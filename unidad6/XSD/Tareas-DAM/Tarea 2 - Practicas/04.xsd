@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" id="blog_cocina">
+
+	<xs:simpleType name="t_cad4">
+		<xs:restriction base="xs:string">
+			<xs:length value="4" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="t_cad35">
+		<xs:restriction base="xs:string">
+			<!-- maxLength -->
+			<xs:maxLength value="35" />
+			<xs:minLength value="1" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="referencia" type="t_cad4" />
+	<xs:element name="titulo" type="t_cad35" />
+	<xs:element name="fecha" type="xs:string" />
+	<xs:element name="publicado" type="xs:boolean" />
+	<xs:element name="clasificacion">
+		<xs:complexType>
+			<xs:attribute name="categoria" type="t_cad35" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:element name="articulo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="referencia" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="titulo" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="fecha" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="publicado" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="clasificacion" minOccurs="1" maxOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="blog_cocina">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="articulo" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>
