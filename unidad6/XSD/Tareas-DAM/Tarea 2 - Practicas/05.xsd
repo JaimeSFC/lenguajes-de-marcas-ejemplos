@@ -2,12 +2,13 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" id="biblioteca">
 
 	<!-- ? METADATA DE LOS subtipos de DIRECCION -->
-	<xs:simpleType name="t_calle">
-		<xs:restriction base="xs:string">
-			<xs:maxLength value="100" />
-			<xs:minLength value="1" />
-		</xs:restriction>
-	</xs:simpleType>
+		<xs:simpleType name="t_calle">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Calle"/>
+				<xs:enumeration value="Avenida"/>
+				<xs:enumeration value="Plaza"/>
+			</xs:restriction>
+		</xs:simpleType>
 
 	<xs:simpleType name="nombre_calle">
 		<xs:restriction base="xs:string">
@@ -38,11 +39,9 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="cp">
+	<xs:simpleType name="t_cp">
 		<xs:restriction base="xs:integer">
-			<xs:minExclusive value="33000" />
-			<xs:maxExclusive value="33100" />
-			<xs:fractionDigits value="0" />
+			<xs:pattern value="33[0-9]{3}"/>
 		</xs:restriction>
 	</xs:simpleType>
 
@@ -131,7 +130,7 @@
 		<xs:element name="numero" type="numero" />
 		<xs:element name="piso" type="piso" />
 		<xs:element name="letra" type="letra" />
-		<xs:element name="cp" type="cp" />
+		<xs:element name="cp" type="t_cp" />
 		<xs:element name="localidad" type="localidad" />
 		<xs:element name="provincia" type="provincia" />
 	</xs:sequence>
