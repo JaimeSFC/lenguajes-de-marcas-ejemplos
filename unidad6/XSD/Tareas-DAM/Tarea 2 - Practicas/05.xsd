@@ -10,6 +10,12 @@
 			</xs:restriction>
 		</xs:simpleType>
 
+		<xs:simpleType name="t_codigo_prestamo">
+			<xs:restriction base="xs:integer">
+<xs:maxInclusive value="9999"/>
+			</xs:restriction>
+		</xs:simpleType>
+
 	<xs:simpleType name="nombre_calle">
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="255" />
@@ -173,6 +179,7 @@
 			<xs:element name="bibliotecario"/>
 			<xs:element name="lector"/>
 		</xs:sequence>
+	<xs:attribute name="codigo_prestamo" type="xs:integer"/>
 	</xs:complexType>
 </xs:element>
 
