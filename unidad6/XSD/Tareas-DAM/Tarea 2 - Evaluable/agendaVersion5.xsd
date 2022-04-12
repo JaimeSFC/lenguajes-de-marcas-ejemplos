@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" id="agenda">
 
-<!-- * INICIO componentes alarmaType -->
+	<!-- * INICIO componentes alarmaType -->
 
 	<!-- ? Atributos alarmaType  -->
 	<xs:simpleType name="t_prioridad">
@@ -46,12 +46,12 @@
 		</xs:sequence>
 	</xs:complexType>
 
-		<!-- ! Descendientes de dia -->
-		<xs:complexType name="dia">
-			<xs:sequence>
-				<xs:element name="diaType" maxOccurs="unbounded" />
-			</xs:sequence>
-		</xs:complexType>
+	<!-- ! Descendientes de dia -->
+	<xs:complexType name="dia">
+		<xs:sequence>
+			<xs:element name="diaType" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
 
 	<!-- ? Componentes de horaType -->
 	<xs:simpleType name="t_hora">
@@ -92,8 +92,8 @@
 	<xs:element name="diaHora">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="dia" minOccurs="0" maxOccurs="0" />
-				<xs:element name="hora" minOccurs="0" maxOccurs="0" />
+				<xs:element name="dia" maxOccurs="unbounded" />
+				<xs:element name="hora" maxOccurs="unbounded" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -132,7 +132,7 @@
 				<xs:element name="alarma" minOccurs="1" maxOccurs="unbounded" />
 			</xs:sequence>
 		</xs:complexType>
-	</xs:element> 
+	</xs:element>
 
 
 	<!-- * INICIO componentes correoType -->
@@ -177,7 +177,7 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="EntradaoSalida" type="t_EntradaoSalida" use="required" />
-	</xs:complexType>	
+	</xs:complexType>
 
 	<!-- * FIN componentes correoType -->
 
@@ -199,73 +199,72 @@
 	</xs:element>
 
 
-<!-- * INICIO componentes contactoType -->
-		<!-- ? Atributo contactoType  -->
-		<xs:simpleType name="t_idioma">
-			<xs:restriction base="xs:string">
-				<xs:enumeration value="es" />
-				<xs:enumeration value="en" />
-				<xs:enumeration value="fr" />
-			</xs:restriction>
-		</xs:simpleType>
-	
-			<!-- ? Componentes contactoType -->
-		<xs:simpleType name="empresaSiNo">
-			<xs:restriction base="xs:string">
-				<xs:enumeration value="si" />
-				<xs:enumeration value="no" />
-			</xs:restriction>
-		</xs:simpleType>
-	
-		<xs:simpleType name="t_telefono">
-			<xs:restriction base="xs:string">
-				<xs:pattern value="\(?\+[0-9]{1,3}\)? ?-?[0-9]{1,3} ?-?[0-9]{3,5} ?-?[0-9]{4}( ?-?[0-9]{3})? ?(\w{1,10}\s?\d{1,6})?" />
-			</xs:restriction>
-		</xs:simpleType>
-	
-			<!-- ! Declaro contactoType -->
-			<xs:element name="contactoType">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="nombre">
-							<xs:complexType mixed="true">
-								<xs:attribute name="idioma" type="t_idioma" use="required" />
-								<xs:attribute name="empresaSiNo" type="empresaSiNo" use="required" />
-							</xs:complexType>
-						</xs:element>
-						<xs:element name="telefono" type="t_telefono" minOccurs="1" maxOccurs="unbounded" />
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<!-- * FIN componentes contactoType -->
-	
-				<!-- !!! Descendientes de contacto -->
-		<xs:complexType name="contacto">
+	<!-- * INICIO componentes contactoType -->
+	<!-- ? Atributo contactoType  -->
+	<xs:simpleType name="t_idioma">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="es" />
+			<xs:enumeration value="en" />
+			<xs:enumeration value="fr" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- ? Componentes contactoType -->
+	<xs:simpleType name="empresaSiNo">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="si" />
+			<xs:enumeration value="no" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="t_telefono">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\(?\+[0-9]{1,3}\)? ?-?[0-9]{1,3} ?-?[0-9]{3,5} ?-?[0-9]{4}( ?-?[0-9]{3})? ?(\w{1,10}\s?\d{1,6})?" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- ! Declaro contactoType -->
+	<xs:element name="contactoType">
+		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="contactoType" minOccurs="1" maxOccurs="unbounded" />
+				<xs:element name="nombre">
+					<xs:complexType mixed="true">
+						<xs:attribute name="idioma" type="t_idioma" use="required" />
+						<xs:attribute name="empresaSiNo" type="empresaSiNo" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="telefono" type="t_telefono" minOccurs="1" maxOccurs="unbounded" />
 			</xs:sequence>
 		</xs:complexType>
-	
-		<!-- !!!! Descendientes de contactos -->
-		<xs:element name="contactos">
-			<xs:complexType>
-				<xs:sequence>
-					<xs:element name="contacto" type="t_telefono" minOccurs="1" maxOccurs="unbounded" />
-				</xs:sequence>
-			</xs:complexType>
-		</xs:element>
-	
-		<!-- !!!!! Descendientes de agenda -->
-		<xs:element name="agenda">
-			<xs:complexType>
-				<xs:sequence>
-					<xs:element name="alarmas" />
-					<xs:element name="correos" />
-					<xs:element name="contactos" />
-				</xs:sequence>
-			</xs:complexType>
-		</xs:element>
-	
+	</xs:element>
+	<!-- * FIN componentes contactoType -->
 
-	
-	</xs:schema>
+	<!-- !!! Descendientes de contacto -->
+	<xs:complexType name="contacto">
+		<xs:sequence>
+			<xs:element name="contactoType" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- !!!! Descendientes de contactos -->
+	<xs:element name="contactos">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="contacto" type="t_telefono" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- !!!!! Descendientes de agenda -->
+	<xs:element name="agenda">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="alarmas" />
+				<xs:element name="correos" />
+				<xs:element name="contactos" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+</xs:schema>

@@ -2,7 +2,6 @@
 <agenda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="agendaVersion5.xsd">
 
 	<alarmas>
-
 		<alarma prioridad="alta" tono="3">
 			<diaHora>
 				<dia>
@@ -34,12 +33,9 @@
 			</diaHora>
 			<asunto>Se acabó la siesta</asunto>
 		</alarma>
-
 	</alarmas>
 
-
 	<correos>
-
 		<correo EntradaoSalida="Salida">
 			<remitente>jaime@gmail.com</remitente>
 			<destinatario>joseluis@educastur.es</destinatario>
@@ -61,14 +57,10 @@
 			<destinatario>jaime@gmail.com</destinatario>
 			<asunto>Calificación Jaime</asunto>
 			<adjunto extension=".jpg">boletin-notas.jpg</adjunto>
-
 		</correo>
-
-
 	</correos>
 
 	<contactos>
-
 		<contacto>
 			<nombre idioma="en" empresaSiNo="si">Tesla</nombre>
 			<telefono>+1273000001</telefono>
@@ -78,14 +70,12 @@
 			<nombre idioma="es" empresaSiNo="si">Jamones de Jabugo</nombre>
 			<telefono>+34959128668</telefono>
 			<telefono>+34959128669</telefono>
-
 		</contacto>
 
 		<contacto>
 			<nombre idioma="fr" empresaSiNo="no">Robespierre</nombre>
 			<telefono>+33455638987</telefono>
 		</contacto>
-
 	</contactos>
 
 </agenda>
