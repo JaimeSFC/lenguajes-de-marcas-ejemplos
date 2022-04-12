@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<agenda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="agendaVersion5.xsd">
+
+	<alarmas>
+
+		<alarma prioridad="alta" tono="3">
+			<diaHora>
+				<dia>
+					<dia>25</dia>
+					<mes>12</mes>
+					<anyo>2022</anyo>
+				</dia>
+				<hora>
+					<hora>07</hora>
+					<minuto>00</minuto>
+					<segundo>00</segundo>
+				</hora>
+			</diaHora>
+			<asunto>A levantarse</asunto>
+		</alarma>
+
+		<alarma prioridad="baja" tono="1">
+			<diaHora>
+				<dia>
+					<dia>25</dia>
+					<mes>12</mes>
+					<anyo>2022</anyo>
+				</dia>
+				<hora>
+					<hora>16</hora>
+					<minuto>00</minuto>
+					<segundo>00</segundo>
+				</hora>
+			</diaHora>
+			<asunto>Se acabó la siesta</asunto>
+		</alarma>
+
+	</alarmas>
+
+
+	<correos>
+
+		<correo EntradaoSalida="Salida">
+			<remitente>jaime@gmail.com</remitente>
+			<destinatario>joseluis@educastur.es</destinatario>
+			<asunto>Tareas pendientes</asunto>
+			<adjunto extension=".xml">agenda.xml</adjunto>
+			<adjunto extension=".xsd">agenda.xsd</adjunto>
+		</correo>
+
+		<correo EntradaoSalida="Salida">
+			<remitente>jaime@gmail.com</remitente>
+			<destinatario>felipe@gmail.com</destinatario>
+			<destinatario>leticia@gmail.com</destinatario>
+			<asunto>Gatitos monísimos</asunto>
+			<adjunto extension=".pps">gatitos.pps</adjunto>
+		</correo>
+
+		<correo EntradaoSalida="Entrada">
+			<remitente>joseluis@educastur.es</remitente>
+			<destinatario>jaime@gmail.com</destinatario>
+			<asunto>Calificación Jaime</asunto>
+			<adjunto extension=".jpg">boletin-notas.jpg</adjunto>
+
+		</correo>
+
+
+	</correos>
+
+	<contactos>
+
+		<contacto>
+			<nombre idioma="en" empresaSiNo="si">Tesla</nombre>
+			<telefono>+1273000001</telefono>
+		</contacto>
+
+		<contacto>
+			<nombre idioma="es" empresaSiNo="si">Jamones de Jabugo</nombre>
+			<telefono>+34959128668</telefono>
+			<telefono>+34959128669</telefono>
+
+		</contacto>
+
+		<contacto>
+			<nombre idioma="fr" empresaSiNo="no">Robespierre</nombre>
+			<telefono>+33455638987</telefono>
+		</contacto>
+
+	</contactos>
+
+</agenda>
