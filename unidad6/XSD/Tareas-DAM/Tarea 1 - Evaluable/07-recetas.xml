@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <recetas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:noNamespaceSchemaLocation="06-recetas.xsd">  
+    xsi:noNamespaceSchemaLocation="07-recetas.xsd">  
     
-		<receta dificultad="Media" picture="wp-content/gazpacho.png" autor="Martín Berasategui" country="España">
+		<receta dificultad="Media" picture="wp-content/gazpacho.png" author="Martín Berasategui" country="ES">
 	<nombre-receta>Gazpacho</nombre-receta>
 				<description>La sopa del verano, súper sencilla de preparar y súper refrescante.</description>
 		<ingredients comensales="4">			
@@ -19,23 +19,23 @@
 		</preparation>
 		<score>
 			<user-reviews average-points="0">
-			<user-review autor="Loli">
+			<user-review author="Loli">
 				<review-text>Salio fatal</review-text>
 				<review-email>lolin@chupilandia.com</review-email>
 				<review-points>0</review-points>
 				<review-date>
 					<day>13</day>
-					<month>April</month>
+					<month>Enero</month>
 					<year>2022</year>
 				</review-date>
 			</user-review>
-			<user-review autor="Raul">
+			<user-review author="Raul">
 				<review-text>Socorro, esto es muy complicado</review-text>
 				<review-email>raul@fatal.com</review-email>
 				<review-points>0</review-points>
 				<review-date>
 					<day>20</day>
-					<month>April</month>
+					<month>Marzo</month>
 					<year>2022</year>
 				</review-date>
 			</user-review>
@@ -43,7 +43,7 @@
 		</score>
 	</receta>
 
-	<receta dificultad="Difícil" picture="wp-content/albondigas.png" autor="Arguiñano" country="España">
+	<receta dificultad="Difícil" picture="wp-content/albondigas.png" author="Arguiñano" country="ES">
 		<nombre-receta>Albóndigas</nombre-receta>
 					<description>Un manjar de manjares.</description>
 			<ingredients comensales="4">			
@@ -61,23 +61,23 @@
 			</preparation>
 			<score>
 				<user-reviews average-points="10">
-				<user-review autor="Chupiman">
+				<user-review author="Chupiman">
 					<review-text>Para chuparse los dedos</review-text>
 					<review-email>chupiman@chupilandia.com</review-email>
 					<review-points>5</review-points>
 					<review-date>
 						<day>10</day>
-						<month>April</month>
+						<month>Enero</month>
 						<year>2022</year>
 					</review-date>
 				</user-review>
-				<user-review autor="Felipe">
+				<user-review author="Felipe">
 					<review-text>Puaggg</review-text>
 					<review-email>arg@fatal.com</review-email>
 					<review-points>0</review-points>
 					<review-date>
 						<day>20</day>
-						<month>April</month>
+						<month>Abril</month>
 						<year>2022</year>
 					</review-date>
 				</user-review>
@@ -85,7 +85,7 @@
 			</score>
 		</receta>
 
-		<receta dificultad="Fácil" picture="wp-content/polos.png" autor="Anonimo" country="España">
+		<receta dificultad="Fácil" picture="wp-content/polos.png" author="Anonimo" country="ES">
 			<nombre-receta>Polos de hielo</nombre-receta>
 						<description>El postre del verano.</description>
 				<ingredients comensales="2">			
