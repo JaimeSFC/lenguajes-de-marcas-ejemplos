@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<recetas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="07-recetas.xsd">
+<recetas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="08-recetas.xsd">
 
 	<receta dificultad="Media" picture="wp-content/gazpacho.png" author="Martín Berasategui" country="ES">
 		<nombre-receta>Gazpacho</nombre-receta>
@@ -43,11 +43,11 @@
 		<nombre-receta>Albóndigas</nombre-receta>
 		<description>Un manjar de manjares.</description>
 		<ingredients comensales="4">
-			<ingredient>2 Ajos</ingredient>
-			<ingredient>Perejil fresco (un manojo)</ingredient>
-			<ingredient>500 gramos de carne picada buena</ingredient>
-			<ingredient>2 tomates</ingredient>
-			<ingredient>3 cebollas</ingredient>
+			<ingredient cantidad="2">Ajos</ingredient>
+			<ingredient cantidad="1">Perejil fresco (un manojo)</ingredient>
+			<ingredient cantidad="500">Gramos de carne picada buena</ingredient>
+			<ingredient cantidad="2">Tomates</ingredient>
+			<ingredient cantidad="3">Cebollas</ingredient>
 		</ingredients>
 		<preparation tiempo="00:45">
 			<step paso="1">Hacer unas bolitas majas con la carne picada.</step>
@@ -83,7 +83,7 @@
 		<nombre-receta>Polos de hielo</nombre-receta>
 		<description>El postre del verano.</description>
 		<ingredients comensales="2">
-			<ingredient>1 botella de coca cola</ingredient>
+			<ingredient cantidad="1">Botella de coca cola</ingredient>
 		</ingredients>
 		<preparation tiempo="00:05">
 			<step paso="1">Echar la coca cola en la polera.</step>

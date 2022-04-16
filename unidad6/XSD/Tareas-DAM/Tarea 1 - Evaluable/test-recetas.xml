@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<recetas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="test-recetas.xsd">
+
+	<receta dificultad="Fácil" picture="wp-content/polos.png" author="Anonimo" country="ES">
+		<nombre-receta>Polos de hielo</nombre-receta>
+		<description>El postre del verano.</description>
+		<ingredients comensales="02">
+			<ingredient cantidad="01">botella de coca cola</ingredient>
+			<ingredient cantidad="01">hielo</ingredient>
+		</ingredients>
+		<preparation tiempo="00:05">
+			<step paso="1">Echar la coca cola en la polera.</step>
+			<step paso="2">Meter en el congelador, esperar 30 minutos y a disfrutar.</step>
+		</preparation>
+	</receta>
+
+
+</recetas>
