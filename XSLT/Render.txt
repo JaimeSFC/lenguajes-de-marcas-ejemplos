@@ -1,0 +1,11 @@
+MSGI: Buenas tardes parece que hay un problema con el renderizado de documentos XSLT. Creo recordar que las versiones antiguas de Internet Explorer lo hacían así que si tenéis un Windows con una versión anterior a la 10 posiblemente os lo renderice.
+
+Tambien podéis utilizar Chrome permitiendo acceso a los ficheros locales ya que el problema es que el xml no puede acceder al xsl por seguridad. Para Mac podéis arrancar con esta línea en un terminal y ya funcionaría:
+
+open -a "Google Chrome" --args --allow-file-access-from-files
+
+Para Windows: editar el acceso directo a Chrome y añadir este argumento.
+
+Ejemplo: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --allow-file-access-from-files
+
+Saludos.
