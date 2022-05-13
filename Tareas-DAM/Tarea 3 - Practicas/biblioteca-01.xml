@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<biblioteca xsi:noNamespaceSchemaLocation="biblioteca.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<biblioteca xsi:noNamespaceSchemaLocation="biblioteca-01.xsd" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
 	<libros>
 		<libro>
 			<ISBN>String</ISBN>
