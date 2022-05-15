@@ -1,0 +1,102 @@
+<xs:schema attributeFormDefault="unqualified" 
+elementFormDefault="qualified" 
+xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Definición de tipos de elementos y atributos -->
+	<xs:simpleType name="tipo_codigo_socio">
+<xs:restriction base="xs:integer">
+	<xs:minInclusive value="10000"/> 
+	<xs:maxInclusive value="99999"/>
+</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="tipo_ISBN_caracteres">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="6" />
+			<xs:maxLength value="13" />
+		</xs:restriction>
+			</xs:simpleType>
+
+	<xs:simpleType name="tipo_booleano">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Si" />
+			<xs:enumeration value="No" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- Elementos LibroType -->
+<xs:complexType name="libroType">
+	<xs:sequence>
+		<xs:element name="ISBN" type="tipo_ISBN_caracteres"/>
+		<xs:element name="titulo" type="xs:string"/>
+		<xs:element name="autor" type="xs:string"/>
+		<xs:element name="numeroPaginas" type="xs:integer"/>
+		<xs:element name="fechaPublicacion" type="xs:date"/>
+		<xs:element name="prestadoSiNo" type="tipo_booleano"/>
+		<xs:element name="fechaDevolucion" type="xs:date"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="librosType">
+	<xs:sequence>
+		<xs:element type="libroType" name="libro" maxOccurs="unbounded" minOccurs="1" />
+	</xs:sequence>
+</xs:complexType>
+
+	<!-- Elementos socioType -->
+	<xs:complexType name="socioType">
+		<xs:sequence>
+			<xs:element name="codigoSocio" type="xs:string"/>
+			<xs:element name="nombreSocio" type="xs:string"/>
+			<xs:element name="apellidoSocio" type="xs:string" maxOccurs="unbounded" minOccurs="1"/>
+			<xs:element name="telefono" type="xs:string"/>
+			<xs:element name="librosPrestados" type="librosPrestadosType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="librosPrestadosType">
+	<xs:sequence>
+		<xs:element type="prestamoType" name="prestamo" maxOccurs="unbounded" minOccurs="1" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sociosType">
+	<xs:sequence>
+		<xs:element type="socioType" name="socio" maxOccurs="unbounded" minOccurs="1" />
+	</xs:sequence>
+</xs:complexType>
+
+
+	<!-- subElementos prestamoType -->
+	<xs:complexType name="prestamoType">
+	<xs:sequence>
+		<xs:element name="ISBN" type="tipo_ISBN_caracteres"/>
+		<xs:element name="titulo" type="xs:string"/>
+		<xs:element name="codigoSocio" type="xs:string"/>
+		<xs:element name="nombreSocio" type="xs:string"/>
+		<xs:element name="apellidoSocio" type="xs:string"/>
+		<xs:element name="fechaDevolucion" type="xs:date"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="prestamosType">
+	<xs:sequence>
+		<xs:element type="prestamoType" name="prestamo" maxOccurs="unbounded" minOccurs="1" />
+	</xs:sequence>
+</xs:complexType>
+
+
+<xs:complexType name="bibliotecaType">
+	<xs:sequence>
+		<xs:element type="librosType" name="libros" />
+		<xs:element type="sociosType" name="socios" />
+		<xs:element type="prestamosType" name="prestamos" />
+	</xs:sequence>
+</xs:complexType>
+
+
+<xs:element name="biblioteca" type="bibliotecaType" />
+
+
+
+</xs:schema>
