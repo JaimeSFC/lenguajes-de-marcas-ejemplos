@@ -1,0 +1,93 @@
+Hijo no directo
+//recetas//review-date 
+
+Acceso al padre
+//review-date/..
+
+Acceso al abuelo
+//review-date/../..
+
+Acceso a la raiz
+//review-date/../../..
+
+
+//ingredient/@cantidad
+//@cantidad[.>1]
+
+
+//user-review[@usuario="Loli"]
+
+Selección específica
+//review-text[1]
+
+Lo mismo:
+//ingredient[@cantidad>1]
+//ingredient/@cantidad[.>1]
+//ingredient//@cantidad[.>1]
+
+
+Concatenar
+//day|//year
+
+Combinaciones
+//day | //year[last()]
+//ingredient[@cantidad<5]|//@average_points[.>1]
+
+Dime que usuario dijo eso de "Salio fatal":
+//user-review[review-text="Salio fatal"]/@usuario
+
+Dime los comensales de la receta del Gazpacho
+//receta[nombre-receta="Gazpacho"]//@comensales
+
+Dime el email del usuario Loli (text no trae atributos)
+//user-review[@usuario="Loli"]//review-email/text()
+
+
+/node() = Devuelve valor y texto del nodo
+//receta[nombre-receta="Gazpacho"]/node()
+
+//node() = Devuelve valor y texto del nodo "ingredientes" y todos sus descendientes cuyos comentsales sean +3
+//ingredients[@comensales>3]//node()
+
+Devuelve el nodo entero de la receta del Gazpacho
+//receta[nombre-receta="Gazpacho"]//node()
+
+text() = Devuelve valor (contenido) 
+//receta//step//text()
+//receta[nombre-receta="Gazpacho"]//ingredient/text()
+
+
+Select all recetas
+/recetas/*
+
+Select all attributes
+//receta//@*
+
+Select only attributes of receta
+//receta/@*
+
+
+Extraer año de publicacion por título
+//libro[titulo="La vida está en otra parte"]//@año
+
+Extraer libros publicados en el año 73
+//libro[fechaPublicacion/@año=1973]/titulo
+
+Aplicar ese año a otra busqueda:
+//libro[fechaPublicacion/@año= //libro[titulo="La vida está en otra parte"] //@año]/titulo/text()
+
+
+Titulo de los libros de Vargas Llosa:
+//libro[autor="Mario Vargas Llosa"]//titulo/text()
+
+Titulo de los libros escritos por Vargas Llosa en el 1969
+//libro[autor="Mario Vargas Llosa"][fechaPublicacion/@año=1969]/titulo/text()
+//libro[autor="Mario Vargas Llosa"][fechaPublicacion/@año="1969"]/titulo/text()
+
+Escritor de Pantaleon
+//libro[titulo="Pantaleon"]/autor/text()
+
+Titulos de los libros escritos por ese escritor:
+//libro[autor= 
+//libro[titulo="Pantaleon"]/autor/text() 
+]/titulo/text()

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<paises>
+	<pais id="p1">
+		<nombre>España</nombre>
+		<continente>Europa</continente>
+		<capital>Madrid</capital>
+		<superficie>504750</superficie>
+		<poblacion>39181114</poblacion>
+		<ciudades>
+			<ciudad>Barcelona</ciudad>
+			<ciudad>Valencia</ciudad>
+			<ciudad>Sevilla</ciudad>
+			<ciudad>Zaragoza</ciudad>
+			<ciudad>Bilbao</ciudad>
+		</ciudades>
+		<lenguas>
+			<lengua>Español</lengua>
+			<lengua>Catalan</lengua>
+			<lengua>Euskera</lengua>
+			<lengua>Asturiano</lengua>
+			<lengua>Gallego</lengua>
+		</lenguas>
+		<religiones>
+			<religion>Catolicos romanos</religion>
+		</religiones>
+		<moneda>Euro</moneda>
+		<gobierno>Monarquía Constitucional</gobierno>
+	</pais>
+	<pais id="p2">
+		<nombre>Francia</nombre>
+		<continente>Europa</continente>
+		<capital>Paris</capital>
+		<superficie>547030</superficie>
+		<poblacion>58317450</poblacion>
+		<ciudades>
+			<ciudad>Bordeaux</ciudad>
+			<ciudad>Cannes</ciudad>
+			<ciudad>Lyon</ciudad>
+			<ciudad>Marseille</ciudad>
+			<ciudad>Nantes</ciudad>
+			<ciudad>Strasbourg</ciudad>
+		</ciudades>
+		<lenguas>
+			<lengua>Frances</lengua>
+		</lenguas>
+		<religiones>
+			<religion>Catolicos romanos</religion>
+			<religion>Protestantes</religion>
+			<religion>Judios</religion>
+			<religion>Musulmanes</religion>
+		</religiones>
+		<moneda>Euro</moneda>
+		<gobierno>República</gobierno>
+	</pais>
+	<pais id="p3">
+		<nombre>Alemania</nombre>
+		<continente>Europa</continente>
+		<capital>Berlin</capital>
+		<superficie>356910</superficie>
+		<poblacion>83536115</poblacion>
+		<ciudades>
+			<ciudad>Aschaffenburg</ciudad>
+			<ciudad>Bonn</ciudad>
+			<ciudad>Colonia</ciudad>
+			<ciudad>Frankfurt</ciudad>
+			<ciudad>Hamburg</ciudad>
+			<ciudad>Hannover</ciudad>
+			<ciudad>Munich</ciudad>
+			<ciudad>Nuremberg</ciudad>
+			<ciudad>Stuttgart</ciudad>
+		</ciudades>
+		<lenguas>
+			<lengua>Aleman</lengua>
+		</lenguas>
+		<religiones>
+			<religion>Protestantes</religion>
+			<religion>Catolicos romanos</religion>
+		</religiones>
+		<moneda>Euro</moneda>
+		<gobierno>República Federal</gobierno>
+	</pais>
+	<pais id="p4">
+		<nombre>Italia</nombre>
+		<continente>Europa</continente>
+		<capital>Roma</capital>
+		<superficie>301230</superficie>
+		<poblacion>57460274</poblacion>
+		<ciudades>
+			<ciudad>Florencia</ciudad>
+			<ciudad>Genova</ciudad>
+			<ciudad>Milan</ciudad>
+			<ciudad>Napoli</ciudad>
+			<ciudad>Palermo</ciudad>
+			<ciudad>Roma</ciudad>
+			<ciudad>Turin</ciudad>
+		</ciudades>
+		<lenguas>
+			<lengua>Italiano</lengua>
+		</lenguas>
+		<religiones>
+			<religion>Catolicos romanos</religion>
+		</religiones>
+		<moneda>Euro</moneda>
+		<gobierno>República</gobierno>
+	</pais>
+	<pais id="p5">
+		<nombre>Suiza</nombre>
+		<continente>Europa</continente>
+		<capital>Ginebra</capital>
+		<superficie>41290</superficie>
+		<poblacion>7207060</poblacion>
+		<ciudades>
+			<ciudad>Basilea</ciudad>
+			<ciudad>Lausanne</ciudad>
+			<ciudad>Zürich</ciudad>
+		</ciudades>
+		<lenguas>
+			<lengua>Aleman</lengua>
+			<lengua>Frances</lengua>
+			<lengua>Italiano</lengua>
+		</lenguas>
+		<religiones>
+			<religion>Catolicos romanos</religion>
+			<religion>Protestantes</religion>
+		</religiones>
+		<moneda>Franco Suizo</moneda>
+		<gobierno>República Federal</gobierno>
+	</pais>
+	<pais id="p6">
+		<nombre>Estados Unidos</nombre>
+		<continente>America del Norte</continente>
+		<capital>Washington</capital>
+		<superficie>9372610</superficie>
+		<poblacion>266476278</poblacion>
+		<ciudades>
+			<ciudad>Chicago</ciudad>
+			<ciudad>Los Angeles</ciudad>
+			<ciudad>New York</ciudad>
+			<ciudad>San Francisco</ciudad>
+		</ciudades>
+		<lenguas>
+			<lengua>Ingles</lengua>
+			<lengua>Español</lengua>
+		</lenguas>
+		<religiones>
+			<religion>Protestantes</religion>
+			<religion>Catolicos romanos</religion>
+			<religion>Judios</religion>
+		</religiones>
+		<moneda>Dolar</moneda>
+		<gobierno>República Federal</gobierno>
+	</pais>
+</paises>

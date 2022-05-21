@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<prediccion>
+  <nombre>Siero</nombre>
+  <provincia>Asturias</provincia>
+  <dia fecha="SS -- 04-17">
+    <prob_precipitacion periodo="00-24">0</prob_precipitacion>
+    <prob_precipitacion periodo="00-12">0</prob_precipitacion>
+    <prob_precipitacion periodo="12-24">0</prob_precipitacion>
+    <prob_precipitacion periodo="00-06">0</prob_precipitacion>
+    <prob_precipitacion periodo="06-12">0</prob_precipitacion>
+    <prob_precipitacion periodo="12-18">0</prob_precipitacion>
+    <prob_precipitacion periodo="18-24">0</prob_precipitacion>
+    <estado_cielo periodo="00-24" descripcion="Despejado">11</estado_cielo>
+    <estado_cielo periodo="00-12" descripcion="Despejado">11</estado_cielo>
+    <estado_cielo periodo="12-24" descripcion="Despejado">11</estado_cielo>
+    <estado_cielo periodo="00-06" descripcion="Despejado">11n</estado_cielo>
+    <estado_cielo periodo="06-12" descripcion="Despejado">11</estado_cielo>
+    <estado_cielo periodo="12-18" descripcion="Despejado">11</estado_cielo>
+    <estado_cielo periodo="18-24" descripcion="Despejado">11n</estado_cielo>
+    <temperatura>
+      <maxima>14</maxima>
+      <minima>1</minima>
+      </temperatura>
+    <sens_termica>
+      <maxima>14</maxima>
+      <minima>-1</minima>
+      </sens_termica>
+  </dia>
+  <dia fecha="SS -- 04-18">
+    <prob_precipitacion periodo="00-24">0</prob_precipitacion>
+    <prob_precipitacion periodo="00-12">0</prob_precipitacion>
+    <prob_precipitacion periodo="12-24">0</prob_precipitacion>
+    <prob_precipitacion periodo="00-06">0</prob_precipitacion>
+    <prob_precipitacion periodo="06-12">0</prob_precipitacion>
+    <prob_precipitacion periodo="12-18">0</prob_precipitacion>
+    <prob_precipitacion periodo="18-24">0</prob_precipitacion>
+    <estado_cielo periodo="00-24" descripcion="Nubes altas">17</estado_cielo>
+    <estado_cielo periodo="00-12" descripcion="Poco nuboso">12</estado_cielo>
+    <estado_cielo periodo="12-24" descripcion="Nubes altas">17</estado_cielo>
+    <estado_cielo periodo="00-06" descripcion="Despejado">11n</estado_cielo>
+    <estado_cielo periodo="06-12" descripcion="Poco nuboso">12</estado_cielo>
+    <estado_cielo periodo="12-18" descripcion="Nubes altas">17</estado_cielo>
+    <estado_cielo periodo="18-24" descripcion="Nubes altas">17n</estado_cielo>
+    <temperatura>
+      <maxima>19</maxima>
+      <minima>0</minima>
+    </temperatura>
+    <sens_termica>
+      <maxima>19</maxima>
+      <minima>-1</minima>
+    </sens_termica>
+  </dia>
+  <dia fecha="SS -- 04-19">
+    <prob_precipitacion periodo="00-24">95</prob_precipitacion>
+    <prob_precipitacion periodo="00-12">40</prob_precipitacion>
+    <prob_precipitacion periodo="12-24">90</prob_precipitacion>
+    <estado_cielo periodo="00-24" descripcion="Cubierto con lluvia">26</estado_cielo>
+    <estado_cielo periodo="00-12" descripcion="Muy nuboso">15</estado_cielo>
+    <estado_cielo periodo="12-24" descripcion="Cubierto con lluvia">26</estado_cielo>
+    <temperatura>
+      <maxima>17</maxima>
+      <minima>6</minima>
+    </temperatura>
+    <sens_termica>
+      <maxima>17</maxima>
+      <minima>6</minima>
+    </sens_termica>
+  </dia>
+</prediccion>
