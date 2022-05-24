@@ -1,0 +1,127 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Definición de tipos de elementos y atributos -->
+	<xs:simpleType name="tipo_longitud_o_latitud">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),\s*[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- Elementos UTMType -->
+	<xs:complexType name="UTMType">
+		<xs:sequence>
+			<xs:element name="uso" type="xs:string" />
+			<xs:element name="dEste" type="xs:string" />
+			<xs:element name="dNorte" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Elementos CoorGeoType -->
+	<xs:complexType name="CoorGeoType">
+		<xs:sequence>
+			<xs:element name="longitud" type="tipo_longitud_o_latitud" />
+			<xs:element name="latitud" type="tipo_longitud_o_latitud" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Elementos coordenadasType -->
+	<xs:complexType name="coordenadasType">
+		<xs:sequence>
+			<xs:element type="UTMType" name="UTM" maxOccurs="unbounded" minOccurs="1" />
+			<xs:element type="CoorGeoType" name="coorGeo" maxOccurs="unbounded" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Elementos datosaeropuertoType -->
+	<xs:complexType name="datosaeropuertoType">
+		<xs:sequence>
+			<xs:element type="coordenadasType" name="coordenadas" maxOccurs="unbounded" minOccurs="1" />
+			<xs:element type="xs:string" name="ciudad" maxOccurs="unbounded" minOccurs="1" />
+			<xs:element type="xs:string" name="pais" maxOccurs="unbounded" minOccurs="1" />
+			<xs:element type="xs:string" name="provincia" maxOccurs="unbounded" minOccurs="1" />
+			<xs:element type="xs:string" name="codigo" maxOccurs="unbounded" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Elementos origenType -->
+	<xs:complexType name="origenType">
+		<xs:sequence>
+			<xs:element type="datosaeropuertoType" name="origen" maxOccurs="unbounded" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Elementos destinoType -->
+	<xs:complexType name="destinoType">
+		<xs:sequence>
+			<xs:element type="datosaeropuertoType" name="destino" maxOccurs="unbounded" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<!-- Elementos fechaType -->
+	<xs:complexType name="fechaType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="dia" maxOccurs="unbounded" minOccurs="1" />
+			<xs:element type="xs:string" name="mes" maxOccurs="unbounded" minOccurs="1" />
+			<xs:element type="xs:string" name="ano" maxOccurs="unbounded" minOccurs="1" />
+			<xs:element type="xs:string" name="zonaHoraria" maxOccurs="unbounded" minOccurs="1" />
+			<xs:element type="xs:string" name="diaEspecial" maxOccurs="unbounded" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<!-- Elementos horaType -->
+	<xs:complexType name="horaType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="hora" maxOccurs="unbounded" minOccurs="1" />
+			<xs:element type="xs:string" name="minuto" maxOccurs="unbounded" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<!-- Elementos fechahoraType -->
+	<xs:complexType name="fechahoraType">
+		<xs:sequence>
+			<xs:element type="fechaType" name="fecha" maxOccurs="unbounded" minOccurs="1" />
+			<xs:element type="horaType" name="hora" maxOccurs="unbounded" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<!-- Elementos vueloType -->
+	<xs:complexType name="vueloType">
+		<xs:sequence>
+			<xs:element name="origen" type="origenType" />
+			<xs:element name="destino" type="destinoType" />
+			<xs:element name="fechaHora" type="fechahoraType" maxOccurs="unbounded" minOccurs="1" />
+			<xs:element name="compañia" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Elementos vuelosType -->
+	<xs:complexType name="vuelosType">
+		<xs:sequence>
+			<xs:element type="vueloType" name="vuelo" maxOccurs="unbounded" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<!-- Elementos aeropuertoType -->
+	<xs:complexType name="aeropuertoType">
+		<xs:sequence>
+			<xs:element type="datosaeropuertoType" name="datosAeropuerto" maxOccurs="unbounded" minOccurs="1" />
+			<xs:element type="vuelosType" name="vuelos" maxOccurs="unbounded" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<!-- Elementos aeropuertosType -->
+	<xs:complexType name="aeropuertosType">
+		<xs:sequence>
+			<xs:element type="aeropuertoType" name="aeropuerto" maxOccurs="unbounded" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:element name="aeropuerto" type="aeropuertosType" />
+</xs:schema>

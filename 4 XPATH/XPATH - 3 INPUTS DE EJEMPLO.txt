@@ -14,8 +14,18 @@ Acceso a la raiz
 //ingredient/@cantidad
 //@cantidad[.>1]
 
+Negación de propiedad:
+//receta[not(@country="ES")]
+
 
 //user-review[@usuario="Loli"]
+//user-review[@usuario="Loli"]/review-text/text()
+//user-review[last()]/review-text/text()
+
+//receta[last()]//step//text()
+//receta[last()]//step[@paso=1]//text()
+
+//receta[position()=1 or position()=3]
 
 Selección específica
 //review-text[1]
@@ -28,6 +38,7 @@ Lo mismo:
 
 Concatenar
 //day|//year
+//score[@*]|//step/text()
 
 Combinaciones
 //day | //year[last()]

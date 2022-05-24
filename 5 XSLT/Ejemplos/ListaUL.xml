@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="file:ListaUL.xsl"?>
+<pedido cliente="Juan Jose Calvo">
+  <producto codigo="872-AA">
+    <nombre>Cortadora de cesped</nombre>
+    <cantidad>1</cantidad>
+    <precio>148.95</precio>
+    <observaciones>Confirmar que es eléctrica</observaciones>
+  </producto> 
+</pedido>

@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="C:\VsCodeC\LMSGI-XSD\lenguajes-de-marcas-ejemplos\5 XSLT\recetas.xsl" ?>
 <recetas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="08-recetas.xsd">
 
 	<receta dificultad="Media" picture="wp-content/gazpacho.png" author="Martín Berasategui" country="ES">
