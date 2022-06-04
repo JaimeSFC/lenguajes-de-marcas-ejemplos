@@ -88,6 +88,8 @@ Aplicar ese año a otra busqueda:
 //libro[fechaPublicacion/@año= //libro[titulo="La vida está en otra parte"] //@año]/titulo/text()
 
 
+//portatil[pulgadas=17]///[cod_ubicacion="almacen3"]/n_serie/text()
+
 Titulo de los libros de Vargas Llosa:
 //libro[autor="Mario Vargas Llosa"]//titulo/text()
 

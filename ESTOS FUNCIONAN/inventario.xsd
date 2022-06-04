@@ -1,0 +1,122 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Definición de tipos de elementos y atributos -->
+	<xs:simpleType name="tipo_numero_serie">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-zA-Z]{3}[0-9]{4}" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="tipo_pulgadas_pantalla">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="[^02468]{1}[^02468]{1}|[0-9]{1}[^02468]{1}" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="tipo_memoria_ram">
+		<xs:restriction base="xs:string">
+			<!-- 		<xs:pattern value="[0-9]{1,4}[MB]|[GB]|[TB]" /> -->
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="tipo_cpu">
+		<xs:restriction base="xs:string">
+			<!-- 	<xs:pattern value="[i3]|[i5]|[i7][_][1-9][gen]" /> -->
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="tipo_sistema_operativo">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="Windows|Linux|Otro" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="tipo_planta">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="primera|segunda|tercera|bajoCubierta" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!--  Definición de estructura -->
+
+	<xs:complexType name="ubicacionType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="cod_ubicacion" />
+			<xs:element type="xs:string" name="nombre" />
+			<xs:element type="tipo_planta" name="planta" />
+			<xs:element type="xs:string" name="superficie" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="pantallaType">
+		<xs:sequence>
+			<xs:element type="tipo_numero_serie" name="n_serie" />
+			<xs:element type="xs:date" name="fecha_alta" />
+			<xs:element type="tipo_pulgadas_pantalla" name="pulgadas" />
+			<xs:element type="ubicacionType" name="ubicacion" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="pantallasType">
+		<xs:sequence>
+			<xs:element type="pantallaType" name="pantalla" maxOccurs="unbounded" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="ordenadorType">
+		<xs:sequence>
+			<xs:element type="tipo_numero_serie" name="n_serie" />
+			<xs:element type="tipo_cpu" name="cpu" />
+			<xs:element type="tipo_memoria_ram" name="memoriaRAM" />
+			<xs:element type="ubicacionType" name="ubicacion" />
+			<xs:element type="xs:date" name="fecha_alta" />
+			<xs:element type="xs:decimal" name="precio" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="ordenadoresType">
+		<xs:sequence>
+			<xs:element type="ordenadorType" name="ordenador" maxOccurs="unbounded" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="portatilType">
+		<xs:sequence>
+			<xs:element type="tipo_numero_serie" name="n_serie" />
+			<xs:element type="tipo_cpu" name="cpu" />
+			<xs:element type="tipo_pulgadas_pantalla" name="pulgadas" />
+			<xs:element type="xs:string" name="cod_ubicacion" />
+		</xs:sequence>
+		<xs:attribute type="tipo_sistema_operativo" name="SO" />
+	</xs:complexType>
+
+
+	<xs:complexType name="portatilesType">
+		<xs:sequence>
+			<xs:element type="portatilType" name="portatil" maxOccurs="unbounded" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="ubicacionesType">
+		<xs:sequence>
+			<xs:element type="ubicacionType" name="ubicacion" maxOccurs="unbounded" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="inventarioType">
+		<xs:sequence>
+			<xs:element type="pantallasType" name="pantallas" />
+			<xs:element type="ordenadoresType" name="ordenadores" />
+			<xs:element type="portatilesType" name="portatiles" />
+			<xs:element type="ubicacionesType" name="ubicaciones" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="inventario" type="inventarioType" />
+
+</xs:schema>

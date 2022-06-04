@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="C:\VsCodeC\LMSGI-XSD\lenguajes-de-marcas-ejemplos\5 XSLT\recetas.xsl" ?>
+<recetas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="examen.xsd">
+
+	<receta dificultad="Media" picture="wp-content/gazpacho.png" author="Martín Berasategui" country="ES">
+		<nombre-receta>Gazpacho</nombre-receta>
+		<description>La sopa del verano, súper sencilla de preparar y súper refrescante.</description>
+		<ingredients comensales="4">
+			<ingredient cantidad="1">Ajo</ingredient>
+			<ingredient cantidad="1">Pan</ingredient>
+			<ingredient cantidad="2">Tomate</ingredient>
+			<ingredient cantidad="5">Pepino</ingredient>
+		</ingredients>
+		<preparation tiempo="00:25">
+			<step paso="1">Pelar y cortar bien los vegetales, meter en la turmix con los demás ingredients.</step>
+			<step paso="2">Tras 10 nminutos a potencia máxima, añadir 1 litro de agua y enfriar en la nevera.</step>
+			<step paso="3">Dejar enfriar durante 20 minutos, pasado ese tiempo, ¡a disfrutar!</step>
+		</preparation>
+		<score average_points="0">
+			<user-review usuario="Loli">
+				<review-text>Salio fatal</review-text>
+				<review-email>lolin@chupilandia.com</review-email>
+				<review-points>0</review-points>
+				<review-date>
+					<day>13</day>
+					<month>Enero</month>
+					<year>2022</year>
+				</review-date>
+			</user-review>
+			<user-review usuario="Raul">
+				<review-text>Socorro, esto es muy complicado</review-text>
+				<review-email>raul@fatal.com</review-email>
+				<review-points>0</review-points>
+				<review-date>
+					<day>20</day>
+					<month>Marzo</month>
+					<year>2022</year>
+				</review-date>
+			</user-review>
+		</score>
+	</receta>
+
+	<receta dificultad="Difícil" picture="wp-content/albondigas.png" author="Arguiñano" country="ES">
+		<nombre-receta>Albóndigas</nombre-receta>
+		<description>Un manjar de manjares.</description>
+		<ingredients comensales="4">
+			<ingredient cantidad="2">Ajos</ingredient>
+			<ingredient cantidad="1">Perejil fresco (un manojo)</ingredient>
+			<ingredient cantidad="500">Gramos de carne picada buena</ingredient>
+			<ingredient cantidad="2">Tomates</ingredient>
+			<ingredient cantidad="3">Cebollas</ingredient>
+		</ingredients>
+		<preparation tiempo="00:45">
+			<step paso="1">Hacer unas bolitas majas con la carne picada.</step>
+			<step paso="2">Mezclar todo con cariño y freir en la sarten.</step>
+			<step paso="3">Después de 20 minutos freir una patatina y avisar a los niños que está la cena lista</step>
+			<step paso="4">¡Rebañar!</step>
+		</preparation>
+		<score average_points="10">
+			<user-review usuario="Chupiman">
+				<review-text>Para chuparse los dedos</review-text>
+				<review-email>chupiman@chupilandia.com</review-email>
+				<review-points>5</review-points>
+				<review-date>
+					<day>10</day>
+					<month>Enero</month>
+					<year>2022</year>
+				</review-date>
+			</user-review>
+			<user-review usuario="Felipe">
+				<review-text>Puaggg</review-text>
+				<review-email>arg@fatal.com</review-email>
+				<review-points>0</review-points>
+				<review-date>
+					<day>20</day>
+					<month>Abril</month>
+					<year>2022</year>
+				</review-date>
+			</user-review>
+		</score>
+	</receta>
+
+	<receta dificultad="Fácil" picture="wp-content/polos.png" author="Anonimo" country="ES">
+		<nombre-receta>Polos de hielo</nombre-receta>
+		<description>El postre del verano.</description>
+		<ingredients comensales="2">
+			<ingredient cantidad="1">Botella de coca cola</ingredient>
+		</ingredients>
+		<preparation tiempo="00:05">
+			<step paso="1">Echar la coca cola en la polera.</step>
+			<step paso="2">Meter en el congelador, esperar 30 minutos y a disfrutar.</step>
+		</preparation>
+	</receta>
+
+
+</recetas>
